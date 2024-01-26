@@ -22,8 +22,8 @@ export type DrowndownMenuProps = {
 export function DropdownMenu({
   primary = true,
   buttonView,
-  styleColor = "red-900",
-  orientation = "right",
+  styleColor = "red-500",
+  orientation = "left",
   menuItems = [],
   onMenuChoiceChange,
 }: DrowndownMenuProps) {
@@ -46,6 +46,8 @@ export function DropdownMenu({
   };
 
   const tailwindClasses = `relative inline-block text-left`;
+  const menuTailwindClasses = `${orientation}-0 absolute z-10 mt-2 w-56 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none`;
+  const menuItemTailwindClasses = `hover:text-[${styleColor}]`;
 
   return (
     <Menu
@@ -64,9 +66,7 @@ export function DropdownMenu({
         leaveFrom="transform opacity-100 scale-100"
         leaveTo="transform opacity-0 scale-95"
       >
-        <Menu.Items
-          className={`absolute ${orientation}-0 z-10 mt-2 w-56 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none`}
-        >
+        <Menu.Items className={[menuTailwindClasses].join(" ")}>
           <div className="py-1">
             {menuItems.map((item, index) => (
               <Menu.Item key={index}>
@@ -74,9 +74,13 @@ export function DropdownMenu({
                   <a
                     href="#"
                     className={classNames(
-                      "px-4 py-2 text-sm flex items-center",
-                      active ? "bg-gray-100 text-gray-900" : "text-gray-700",
-                      `hover:text-${styleColor}`
+                      [
+                        "px-4 py-2 text-sm flex items-center",
+                        active
+                          ? `bg-gray-100 text-gray-900 hover:text-${styleColor}`
+                          : "text-gray-700",
+                        menuItemTailwindClasses,
+                      ].join(" ")
                     )}
                     onClick={() => handleMenuItemClick(item.name)}
                   >

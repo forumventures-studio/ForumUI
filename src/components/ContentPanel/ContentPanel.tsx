@@ -41,7 +41,7 @@ export function ContentPanel({
           <div className="flex items-center">
             {titleIcon}
             {/* Add margin-right for spacing */}
-            <span className="font-bold">{title}</span>
+            <span className="font-bold mr-5">{title}</span>
           </div>
           {/* Right side */}
           <div className="flex items-center">

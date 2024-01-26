@@ -1,11 +1,11 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import { ProgressBar } from "./ProgressBar";
+import { StackedHeader } from "./StackedHeader";
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 const meta = {
-  title: "Swyft Treasury/Functional Components/ProgressBar",
-  component: ProgressBar,
+  title: "Swyft Treasury/Layout/StackedHeader",
+  component: StackedHeader,
   parameters: {
     // Optional parameter to center the component in the Canvas. More info: https://storybook.js.org/docs/configure/story-layout
     layout: "centered",
@@ -13,14 +13,15 @@ const meta = {
   // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/writing-docs/autodocs
   tags: ["autodocs"],
   // More on argTypes: https://storybook.js.org/docs/api/argtypes
-  argTypes: {
-    progressColor: { control: "color" },
-  },
-} satisfies Meta<typeof ProgressBar>;
+  argTypes: {},
+} satisfies Meta<typeof StackedHeader>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
-  args: { totalValue: 100, currentValue: 70 },
+  args: {
+    title: "Accounting Checklist",
+    description: "Accounting checklist for your organization",
+  },
 };

@@ -29,7 +29,6 @@ export function Button({
     large: "px-5 py-3 text-md",
   };
 
-  // Define the default Tailwind CSS classes for the button
   const tailwindClasses = `rounded-md font-semibold text-white shadow-sm flex items-center justify-center focus:outline-none focus:ring-opacity-20 focus:ring-red-900 hover:bg-${backgroundColor}-50 active:bg-${backgroundColor}-50 ${sizeClasses[size]}`;
 
   return (

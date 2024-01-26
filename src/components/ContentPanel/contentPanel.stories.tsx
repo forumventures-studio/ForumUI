@@ -4,7 +4,7 @@ import { ContentPanel } from "./ContentPanel";
 import { CreditCardCheck, LineChartDown05 } from "@untitled-ui/icons-react";
 
 const meta = {
-  title: "Swyft/ContentPanel",
+  title: "Swyft Treasury/Content Components/ContentPanel",
   component: ContentPanel,
   parameters: {
     layout: "centered",
