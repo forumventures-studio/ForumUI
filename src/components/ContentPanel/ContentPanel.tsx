@@ -27,7 +27,8 @@ export function ContentPanel({
   const mode = primary
     ? "storybook-contentPanel--primary"
     : "storybook-contentPanel--secondary";
-  // Define the default Tailwind CSS classes for the panel
+
+
   const tailwindClasses = "flex-1 overflow-hidden rounded-lg bg-white shadow";
 
   return (

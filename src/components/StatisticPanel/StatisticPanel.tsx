@@ -6,7 +6,6 @@ export type PanelProps = {
   className?: string;
   title?: string;
   titleIcon?: ReactNode;
-  subtitle?: string;
   mainText?: string | number;
   subText?: string | number;
 } & React.HTMLAttributes<HTMLDivElement>;
@@ -19,6 +18,7 @@ export function StatisticPanel({
   subText,
   ...rest
 }: PanelProps) {
+  
   // Define the default Tailwind CSS classes for the panel
   const tailwindClasses = "overflow-hidden rounded-lg bg-white shadow";
 
@@ -26,6 +26,7 @@ export function StatisticPanel({
     <div {...rest} className={classNames(tailwindClasses, className)}>
       <div className="px-4 py-5 sm:p-6">
         <div className="flex flex-row">
+          {/* Title Area */}
           {titleIcon && (
             <div
               className="stroke-1 text-swyft-secondary-1"
@@ -36,6 +37,7 @@ export function StatisticPanel({
           )}
           <span className="text-gray-500">{title}</span>
         </div>
+        {/* Optional Collapsible Content Area */}
         {mainText !== undefined && mainText !== null && (
           <div className="flex flex-row mt-3">
             <span className="text-3xl font-bold">{mainText}</span>

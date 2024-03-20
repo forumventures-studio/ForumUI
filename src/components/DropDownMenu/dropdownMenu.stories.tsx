@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import { DropdownMenu } from "./DropDownMenu";
+import { DropdownMenu } from "./DropdownMenu";
 import { DotsVertical } from "@untitled-ui/icons-react";
 import { CreditCardCheck, LineChartDown05 } from "@untitled-ui/icons-react";
 
