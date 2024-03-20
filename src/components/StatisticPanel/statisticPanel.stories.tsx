@@ -4,7 +4,7 @@ import { StatisticPanel } from "./StatisticPanel";
 import { NotificationBox } from "@untitled-ui/icons-react";
 
 const meta = {
-  title: "Swyft Treasury/Content Components/StatisticPanel",
+  title: "Credit Pulse/Content Components/StatisticPanel",
   component: StatisticPanel,
   parameters: {
     layout: "centered",
