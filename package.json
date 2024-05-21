@@ -1,8 +1,15 @@
 {
-  "name": "forumventuresdesignframework",
+  "name": "forumui",
+  "description": "A UI Component library from Forum Ventures",
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "author": "Waun Broderick <waunbroderick@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/forumventures-studio/ForumUI"
+  },
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",

@@ -13,7 +13,7 @@ export type ButtonProps = {
 export function Button({
   label,
   backgroundColor = "#8EBFAE",
-  primary = false,
+  primary = true,
   size = "medium",
   children,
   onClick,
@@ -22,6 +22,8 @@ export function Button({
   const mode = primary
     ? "storybook-button--primary"
     : "storybook-button--secondary";
+  const bgColor = primary ? backgroundColor : "#D3D3D3"; // Default secondary color
+  const textColor = primary ? "text-white" : "text-black"; // Example: white text for primary, black for secondary
 
   const sizeClasses = {
     small: "px-2 py-1 text-xs",
@@ -29,11 +31,11 @@ export function Button({
     large: "px-5 py-3 text-md",
   };
 
-  const tailwindClasses = `rounded-md font-semibold text-white shadow-sm flex items-center justify-center focus:outline-none focus:ring-opacity-20 focus:ring-red-900 hover:bg-${backgroundColor}-50 active:bg-${backgroundColor}-50 ${sizeClasses[size]}`;
+  const tailwindClasses = `rounded-md font-semibold ${textColor} shadow-sm flex items-center justify-center focus:outline-none focus:ring-opacity-20 focus:ring-red-900 hover:bg-${bgColor}-50 active:bg-${bgColor}-50 ${sizeClasses[size]}`;
 
   return (
     <button
-      style={{ backgroundColor }}
+      style={{ backgroundColor: bgColor }} // Using bgColor variable
       onClick={onClick}
       {...rest}
       className={[
