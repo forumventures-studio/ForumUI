@@ -7,35 +7,36 @@ export type ButtonProps = {
   label?: string;
   size?: "small" | "medium" | "large";
   className?: string;
-  onClick?: () => void;
+  onClick?: React.MouseEventHandler<HTMLButtonElement>;
+  type?: "button" | "submit" | "reset";
 } & React.HTMLAttributes<HTMLButtonElement>;
 
 export function Button({
   label,
-  backgroundColor = "#8EBFAE",
-  primary = true,
+  backgroundColor = "#9292CC",
+  primary = false,
   size = "medium",
   children,
   onClick,
+  type = "button",
   ...rest
 }: ButtonProps) {
   const mode = primary
     ? "storybook-button--primary"
     : "storybook-button--secondary";
-  const bgColor = primary ? backgroundColor : "#D3D3D3"; // Default secondary color
-  const textColor = primary ? "text-white" : "text-black"; // Example: white text for primary, black for secondary
 
   const sizeClasses = {
     small: "px-2 py-1 text-xs",
-    medium: "px-3.5 py-2.5 text-sm",
+    medium: "px-5 py-2 text-sm",
     large: "px-5 py-3 text-md",
   };
 
-  const tailwindClasses = `rounded-md font-semibold ${textColor} shadow-sm flex items-center justify-center focus:outline-none focus:ring-opacity-20 focus:ring-red-900 hover:bg-${bgColor}-50 active:bg-${bgColor}-50 ${sizeClasses[size]}`;
+  const tailwindClasses = `rounded-md font-semibold text-white shadow-sm flex items-center justify-center focus:outline-none focus:ring-opacity-20 focus:ring-red-900 hover:bg-${backgroundColor}-50 active:bg-${backgroundColor}-50 ${sizeClasses[size]}`;
 
   return (
     <button
-      style={{ backgroundColor: bgColor }} // Using bgColor variable
+      type={type}
+      style={{ backgroundColor }}
       onClick={onClick}
       {...rest}
       className={[
