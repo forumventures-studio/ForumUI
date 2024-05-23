@@ -9,7 +9,7 @@ jobs:
           fetch-depth: 0
       - uses: actions/setup-node@v3
         with:
-          node-version: "16"
+          node-version: "18"
       - run: npm install
       - run: npm run prepublish
       - run: npx chromatic --project-token=${{ secrets.CHROMATIC_PROJECT_TOKEN }}
