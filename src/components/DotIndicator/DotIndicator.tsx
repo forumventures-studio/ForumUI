@@ -16,11 +16,13 @@ export function DotIndicator({
     ? "storybook-dotIndicator--primary"
     : "storybook-dotIndicator--secondary";
 
-  const adjustedColor = color.startsWith("#")
-    ? { backgroundColor: color } // Directly use style for hex colors
-    : `bg-${color}`; // Use Tailwind class if it's a valid Tailwind color class
+  // Ensure the style object is always a valid CSSProperties object or undefined
+  const style = color.startsWith("#") ? { backgroundColor: color } : undefined;
 
-  const tailwindClasses = `inline-block mx-2 h-3 w-3 rounded-full mt-2`;
+  // Adjust how you apply Tailwind classes: only add bg-* if color does not start with '#'
+  const backgroundClass = color.startsWith("#") ? "" : `bg-${color}`;
+
+  const tailwindClasses = `inline-block mx-2 h-3 w-3 rounded-full mt-2 ${backgroundClass}`;
 
   const combinedClassName = [
     "storybook-dotIndicator",
@@ -34,7 +36,7 @@ export function DotIndicator({
   return (
     <span
       className={combinedClassName}
-      style={color.startsWith("#") ? adjustedColor : {}}
+      style={style} // Only pass an object or undefined
       {...rest}
     ></span>
   );

@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import {
   ColumnDef,
-  createColumnHelper,
   flexRender,
   getCoreRowModel,
   useReactTable,
@@ -35,13 +34,11 @@ export default function Table<T>({
   primary = true,
   tableTitle = "Table Title",
   data,
-  subTitle = " A list of all the users in your account including their name, title,email and role.",
   columns,
   options = [],
   status = "uninitialized",
   onRowClick,
 }: TableProps<T>) {
-  const columnHelper = createColumnHelper<T>();
   const [pagination, setPagination] = useState<PaginationState>({
     pageIndex: 0,
     pageSize: 10, // Change this to your desired default page size
