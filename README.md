@@ -27,7 +27,7 @@ Many of these features are 'batteries included' and rely on some of the followin
 
 ### Form UI System
 
-Visit [Forum UI - Storybook](https://mui.com/system/getting-started/) to view the full Forum UI Storybook.
+Visit [Forum UI - Storybook](--) to view the full Forum UI Storybook.
 
 ## Sponsors
 
@@ -39,7 +39,7 @@ Visit [Forum UI - Storybook](https://mui.com/system/getting-started/) to view th
 
 ## Examples
 
-Our documentation features [a collection of example projects](https://github.com/mui/material-ui/tree/master/examples).
+--
 
 ## Contributing
 
