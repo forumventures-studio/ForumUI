@@ -19,7 +19,6 @@ const Pagination: React.FC<PaginationProps> = ({
   itemsPerPage,
   onPageChange,
   onItemsPerPageChange, // Include this in the props destructuring
-  primary = true,
 }) => {
   const pageNumbers: number[] = [];
   for (let i = 1; i <= Math.ceil(totalItems / itemsPerPage); i++) {

@@ -1,11 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import {
-  ColumnDef,
-  createColumnHelper,
-  flexRender,
-  getCoreRowModel,
-  useReactTable,
-} from "@tanstack/react-table";
+import { ColumnDef, createColumnHelper } from "@tanstack/react-table";
 
 import Table from "./Table";
 

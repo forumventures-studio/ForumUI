@@ -1,14 +1,8 @@
-import {
-  BuildingOfficeIcon,
-  CreditCardIcon,
-  UserIcon,
-  UsersIcon,
-} from "@heroicons/react/20/solid";
 import { useState } from "react";
 
 export type TabType = {
   name: string;
-  icon?: any;
+  icon?: React.ElementType;
   current: boolean;
 };
 
@@ -17,18 +11,17 @@ export type TabsProps = {
   tabs?: TabType[];
   tabColour?: string;
   size?: "small" | "medium" | "large";
-  className?: any;
+  className?: string;
   onTabChange?: (tab: TabType) => void; // Callback function prop
 };
 
-function classNames(...classes: any[]) {
+function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(" ");
 }
 
 export default function Tabs({
   primary = true,
   tabs = [],
-  tabColour = "creditpulse-green",
   size = "medium",
   onTabChange,
   className,
@@ -41,12 +34,6 @@ export default function Tabs({
   const mode = primary
     ? "storybook-tabs--primary"
     : "storybook-tabs--secondary";
-
-  const sizeClasses = {
-    small: "px-2 py-1 text-xs",
-    medium: "px-3.5 py-2.5 text-sm",
-    large: "px-5 py-3 text-md",
-  };
 
   const tailwindClasses = `block w-full rounded-md border-gray-300 focus:border-creditpulse-green-500 focus:ring-creditpulse-green-500`;
 

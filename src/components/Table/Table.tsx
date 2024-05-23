@@ -11,10 +11,10 @@ import LoadingAnimation from "../LoadingAnimation/LoadingAnimation";
 import Pagination from "../Pagination/Pagination";
 import { SearchBar } from "../SearchBar/SearchBar";
 
-export type Option = {
+export type Option<T> = {
   name: string;
   icon: JSX.Element;
-  onClick: (rowData: any) => void;
+  onClick: (rowData: T) => void;
 };
 
 export type TableProps<T> = {
@@ -24,7 +24,7 @@ export type TableProps<T> = {
   page?: number;
   data?: T[];
   columns?: ColumnDef<T>[];
-  options?: Option[];
+  options?: Option<T>[];
   status?: "loading" | "error" | "success" | "uninitialized";
   // Callback function to pass the selected row to parents
   onRowClick?: (rowData: T) => void;
@@ -48,7 +48,11 @@ export default function Table<T>({
 
   const filteredData = React.useMemo(() => {
     if (!searchQuery) return data ?? [];
+    // TODO: FIX
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     return (data ?? []).filter((row: any) =>
+      // TODO: FIX
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       columns?.some((column: any) => {
         const cellValue = column.accessorFn ? column.accessorFn(row) : null;
         return cellValue

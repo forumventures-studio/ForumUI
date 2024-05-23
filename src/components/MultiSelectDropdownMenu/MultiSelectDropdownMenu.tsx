@@ -1,4 +1,4 @@
-import React, { Fragment, useRef, useState } from "react";
+import React, { Fragment, useState } from "react";
 import classNames from "classnames";
 import { Menu, Transition } from "@headlessui/react";
 import { Check, ChevronDown } from "@untitled-ui/icons-react";
@@ -6,7 +6,7 @@ import { Check, ChevronDown } from "@untitled-ui/icons-react";
 export type MenuItem = {
   name: string;
   icon?: React.ReactNode;
-  value: any; // Ensure each menu item has a value
+  value: string | number; // Ensure each menu item has a value
 };
 
 export type DropdownMenuProps = {
@@ -17,13 +17,12 @@ export type DropdownMenuProps = {
   styleColor?: string;
   placeHolderText?: string;
   orientation?: "left" | "right";
-  onMenuChoiceChange?: (choices: string[]) => void;
-  defaultValues?: any[];
+  onMenuChoiceChange?: (choices: Array<string | number>) => void;
+  defaultValues?: Array<string | number>;
 } & React.HTMLAttributes<HTMLDivElement>;
 
 export function MultiSelectDropdownMenu({
   primary = true,
-  buttonView,
   styleColor = "creditpulse-green-500",
   orientation = "right",
   menuItems = [],
@@ -32,7 +31,7 @@ export function MultiSelectDropdownMenu({
   defaultValues = [],
 }: DropdownMenuProps) {
   const [selectedChoices, setSelectedChoices] = useState<
-    { name: string; value: any }[]
+    { name: string; value: string | number }[]
   >(() => {
     return menuItems
       .filter((item) => defaultValues.includes(item.value))

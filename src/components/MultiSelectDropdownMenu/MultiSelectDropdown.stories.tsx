@@ -1,9 +1,8 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
 import { MultiSelectDropdownMenu } from "./MultiSelectDropdownMenu";
-import { CreditCardCheck, LineChartDown05 } from "@untitled-ui/icons-react";
 
-const handleMenuChoiceChange = () => (choices: string[]) => {
+const handleMenuChoiceChange = () => (choices: Array<string | number>) => {
   console.log("Selected choices:", choices);
 };
 const meta = {

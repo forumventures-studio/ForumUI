@@ -3,7 +3,6 @@ import type { Meta, StoryObj } from "@storybook/react";
 import Tabs from "./Tabs";
 import {
   BuildingOfficeIcon,
-  CreditCardIcon,
   UserIcon,
   UsersIcon,
 } from "@heroicons/react/20/solid";
