@@ -1,30 +1,80 @@
-# React + TypeScript + Vite
+<!-- markdownlint-disable-next-line -->
+<p align="center">
+  <a href="https://www.forumvc.com/" rel="noopener" target="_blank"><img width="150" height="133" src="https://media.licdn.com/dms/image/C4D0BAQEno9F1Lz4Aew/company-logo_200_200/0/1630469543014/acceleprise_san_francisco_logo?e=2147483647&v=beta&t=tGxGMRJI9ejy9WOWMTG72CRnY5HH_y49uZomX5wUpkQ" alt="Forum UI logo"></a>
+</p>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<h1 align="center">Forum UI</h1>
 
-Currently, two official plugins are available:
+**Forum UI** contains a collection of components that Forum Ventures has used to develop a series of our Studio applications. These help us ship new features faster.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Many of these features are 'batteries included' and rely on some of the following popular and battle-tested libraries:
 
-## Expanding the ESLint configuration
+- [React-Hook Form](https://react-hook-form.com/) Performant, flexible and extensible forms with easy-to-use validation.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- [TailwindCSS](https://tailwindcss.com/) Rapidly build modern websites without ever leaving your HTML.
 
-- Configure the top-level `parserOptions` property like this:
+<div align="center">
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+[![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/forumventures-studio/forumui/blob/main/LICENSE)
+[![npm latest package](https://img.shields.io/npm/v/@forumventures-studio/forumui/latest.svg)](https://www.npmjs.com/package/@forumventures-studio/forumui)
+[![npm downloads](https://img.shields.io/npm/dm/@forumventures-studio/forumui.svg)](https://www.npmjs.com/package/@forumventures-studio/forumui)
+[![Follow on X](https://img.shields.io/twitter/follow/forumventures.svg?label=follow+ForumVentures)](https://x.com/forumventures?lang=en)
+[![Average time to resolve an issue](https://isitmaintained.com/badge/resolution/forumventures-studio/forumui.svg)](https://isitmaintained.com/project/forumventures-studio/forumui "Average time to resolve an issue")
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+</div>
+
+## Documentation
+
+### Form UI System
+
+Visit [Forum UI - Storybook](https://mui.com/system/getting-started/) to view the full Forum UI Storybook.
+
+## Sponsors
+
+--
+
+## Questions
+
+--
+
+## Examples
+
+Our documentation features [a collection of example projects](https://github.com/mui/material-ui/tree/master/examples).
+
+## Contributing
+
+Read the [contributing guide](/CONTRIBUTING.md) to learn about our development process, how to propose bug fixes and improvements, and how to build and test your changes.
+
+## Changelog
+
+--
+
+## Roadmap
+
+--
+
+## License
+
+This project is licensed under the terms of the
+[MIT license](/LICENSE).
+
+## Security
+
+For details of supported versions and contact details for reporting security issues, please refer to the [security policy - WIP]().
+
+## Sponsoring services
+
+--
+
+<div>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://mui.com/static/readme/github-darkmode.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://mui.com/static/readme/github-lightmode.svg">
+  <img alt="GitHub logo" src="https://mui.com/static/readme/github-lightmode.svg" width="80" height="43">
+</picture>
+
+[GitHub](https://github.com/) lets us host the Git repository and coordinate contributions.
+
+</div>
+
+</div>
