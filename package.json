@@ -32,7 +32,7 @@
   },
   "scripts": {
     "dev": "vite",
-    "prepublish": "babel src --out-dir lib",
+    "prepublish": "npx babel src --out-dir lib",
     "build": "tsc && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "prepare": "npm run build",
