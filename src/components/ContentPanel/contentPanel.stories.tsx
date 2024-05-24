@@ -4,7 +4,7 @@ import { ContentPanel } from "./ContentPanel";
 import { CreditCardCheck, LineChartDown05 } from "@untitled-ui/icons-react";
 
 const meta = {
-  title: "Credit Pulse/Content Components/ContentPanel",
+  title: "Content Components/ContentPanel",
   component: ContentPanel,
   parameters: {
     layout: "centered",

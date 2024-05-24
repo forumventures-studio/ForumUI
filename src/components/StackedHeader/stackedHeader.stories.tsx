@@ -4,7 +4,7 @@ import { StackedHeader } from "./StackedHeader";
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 const meta = {
-  title: "Credit Pulse/Layout/StackedHeader",
+  title: "Layout/StackedHeader",
   component: StackedHeader,
   parameters: {
     // Optional parameter to center the component in the Canvas. More info: https://storybook.js.org/docs/configure/story-layout

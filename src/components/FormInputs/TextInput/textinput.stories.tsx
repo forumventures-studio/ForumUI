@@ -4,7 +4,7 @@ import { FormTextInput } from "./TextInput";
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 const meta = {
-  title: "Credit Pulse/Functional Components/Form/Text Input",
+  title: "Functional Components/Form/Text Input",
   component: FormTextInput,
   parameters: {
     // Optional parameter to center the component in the Canvas. More info: https://storybook.js.org/docs/configure/story-layout

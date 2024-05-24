@@ -4,7 +4,7 @@ import { FormSelectInput } from "./SelectInput";
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 const meta = {
-  title: "Credit Pulse/Functional Components/Form/Select Input",
+  title: "Functional Components/Form/Select Input",
   component: FormSelectInput,
   parameters: {
     // Optional parameter to center the component in the Canvas. More info: https://storybook.js.org/docs/configure/story-layout

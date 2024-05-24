@@ -6,7 +6,7 @@ const handleMenuChoiceChange = () => (choices: Array<string | number>) => {
   console.log("Selected choices:", choices);
 };
 const meta = {
-  title: "Credit Pulse/Functional Components/MultiSelectDropdownMenu",
+  title: "Functional Components/MultiSelectDropdownMenu",
   component: MultiSelectDropdownMenu,
   parameters: {
     layout: "centered",
